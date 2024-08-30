@@ -1,12 +1,18 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
-const SponsersImg = ({ src, alt }) => {
+const SponsorsImg = ({ src, alt }) => {
   return (
-    <div className="bg-gray-100 rounded-2xl w-36 h-20 overflow-hidden p-2  shadow-md">
-    <Image src={src} alt={alt} width={300} height={300} className="h-full w-full object-cover" />
-  </div>
-  )
-}
+    <div className="relative w-full pt-[75%] bg-gray-100/80 rounded-2xl overflow-hidden shadow-md">
+      <Image
+        src={src}
+        alt={alt}
+        layout="fill"
+        objectFit="contain"
+        className="p-2"
+      />
+    </div>
+  );
+};
 
-export default SponsersImg
+export default SponsorsImg;
